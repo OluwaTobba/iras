@@ -1,0 +1,12 @@
+specVersion: "v1"
+serviceId: "iras"
+location: "us-central1"
+schema:
+  source: "./schema"
+  datasource:
+    postgresql:
+      database: "fdcdb"
+      cloudSql:
+        instanceId: "iras-fdc"
+      # schemaValidation: "COMPATIBLE"
+connectorDirs: ["./connector"]

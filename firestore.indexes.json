@@ -1,0 +1,13 @@
+{
+    "indexes": [
+      {
+        "collectionGroup": "reports",
+        "queryScope": "COLLECTION",
+        "fields": [
+          { "fieldPath": "officerId", "order": "ASCENDING" },
+          { "fieldPath": "submittedAt", "order": "DESCENDING" }
+        ]
+      }
+    ],
+    "fieldOverrides": []
+}  

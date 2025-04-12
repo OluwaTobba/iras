@@ -1,27 +1,31 @@
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
-import OfficerDashboard from './pages/officer/OfficerDashboard';
-import TemplateForm from './pages/officer/TemplateForm';
-import AdminDashboard from './pages/admin/AdminDashboard';
-import AdminControl from './pages/admin/AdminControl';
 import Login from './pages/Login';
+import AdminRoutes from './routes/AdminRoutes';
+import OfficerRoutes from './routes/OfficerRoutes';
+import useAuth from './hooks/useAuth';
 
 function App() {
+  const { user, loading } = useAuth();
+
+  if (loading) {
+    return <div className="flex items-center justify-center h-screen">Loading...</div>;
+  }
+
+  const isAuthenticated = !!user;
+  const isAdmin = user?.email === 'admin@sterlingbankhq.com';
+
   return (
     <Router>
       <Routes>
         <Route path="/" element={<Login />} />
-
-        {/* Officer Routes */}
-        <Route path="/officer/dashboard" element={<OfficerDashboard />} />
-        <Route path="/officer/template/:id" element={<TemplateForm />} />
-
-        {/* Admin Routes */}
-        <Route path="/admin/dashboard" element={<AdminDashboard />} />
-        <Route path="/admin/control" element={<AdminControl />} />
-
-        {/* Fallback */}
-        <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
+
+      {isAdmin ? (
+        <AdminRoutes isAuthenticated={isAuthenticated} />
+      ) : (
+        <OfficerRoutes isAuthenticated={isAuthenticated} />
+      )}
+      
     </Router>
   );
 }

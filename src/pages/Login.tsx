@@ -1,37 +1,31 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { signInWithEmailAndPassword } from 'firebase/auth';
-import { auth } from '../services/firebase';
+import { useLogin } from '../hooks/useLogin';
 
 function Login() {
   const [email, setEmail] = useState<string>('');
   const [password, setPassword] = useState<string>('');
-  const [error, setError] = useState<string>('');
+  const { login, error } = useLogin();
   const navigate = useNavigate();
 
   const handleLogin = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setError('');
-    try {
-      const userCredential = await signInWithEmailAndPassword(auth, email, password);
-      const user = userCredential.user;
+    const user = await login(email, password);
 
-      // route based on role (to be expanded later)
-      if (user.email === 'admin@example.com') {
-        navigate('/admin');
+    if (user) {
+      if (user.email === 'admin@sterlingbankhq.com') {
+        navigate('/admin/dashboard');
       } else {
-        navigate('/officer');
+        navigate('/officer/dashboard');
       }
-    } catch (err) {
-      setError('Invalid email or password');
-    }
+    } 
   };
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-100 to-red-300">
       <div className="bg-white p-10 rounded-2xl shadow-2xl w-full max-w-md border-t-8 border-red-500">
-        <h2 className="text-3xl font-extrabold text-center text-red-800 mb-6">Welcome Back</h2>
-        <p className="text-center text-gray-600 mb-8">Login to submit reports</p>
+        <h2 className="text-3xl font-extrabold text-center text-red-800 mb-6">Welcome Back Officer</h2>
+        <p className="text-center text-gray-600 mb-8">Login to submit/view reports</p>
         <form onSubmit={handleLogin} className="space-y-5">
           <div>
             <label className="block text-sm font-semibold text-gray-700">Email Address</label>
@@ -56,7 +50,7 @@ function Login() {
           {error && <p className="text-red-500 text-sm text-center font-medium">{error}</p>}
           <button
             type="submit"
-            className="w-full bg-red-600 text-white py-3 rounded-xl hover:bg-blue-700 transition duration-200 font-semibold text-lg shadow-md"
+            className="w-full bg-red-600 text-white py-4 rounded-xl hover:bg-red-700 transition duration-200 font-semibold text-lg shadow-md"
           >
             Sign In
           </button>

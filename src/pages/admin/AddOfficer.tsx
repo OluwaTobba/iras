@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import { db } from '../../services/firebase';
-import { collection, addDoc } from 'firebase/firestore';
+// import { db } from '../../services/firebase';
+// import { collection, addDoc } from 'firebase/firestore';
 import Sidebar from '../../components/Admin/AdminSidebar';
 import Logout from '../../components/Logout';
 

@@ -30,54 +30,60 @@ function AddOfficer() {
                 <h1 className="text-2xl font-bold text-red-800">Add New Officer</h1>
                 <Logout />
             </header>
-            <div className="p-6 max-w-xl mx-auto">
-                <h2 className="text-2xl font-semibold mb-4 text-red-700"></h2>
-                <form onSubmit={handleSubmit} className="space-y-4 max-w-xl">
-                    <input
-                    type="text"
-                    name="name"
-                    placeholder="Full Name"
-                    value={officer.name}
-                    onChange={handleChange}
-                    required
-                    className="w-full px-4 py-2 border border-gray-300 rounded-md"
-                    />
-                    <input
-                    type="email"
-                    name="email"
-                    placeholder="Email Address"
-                    value={officer.email}
-                    onChange={handleChange}
-                    required
-                    className="w-full px-4 py-2 border border-gray-300 rounded-md"
-                    />
-                    <input
-                    type="text"
-                    name="location"
-                    placeholder="Location"
-                    value={officer.location}
-                    onChange={handleChange}
-                    required
-                    className="w-full px-4 py-2 border border-gray-300 rounded-md"
-                    />
-                    <input
-                    type="text"
-                    name="officerId"
-                    placeholder="Officer ID"
-                    value={officer.officerId}
-                    onChange={handleChange}
-                    required
-                    className="w-full px-4 py-2 border border-gray-300 rounded-md"
-                    />
 
-                    <button
-                    type="submit"
-                    className="w-full bg-red-600 text-white py-2 rounded-md hover:bg-red-700 transition duration-200"
-                    >
-                    Add Officer
-                    </button>
-                </form>
+            <div className="mt-20 flex items-center justify-center">
+                <div className="bg-gray-100 p-10 rounded-2xl shadow-xl w-full max-w-3xl border-t-8 border-red-500">
+                    <div className="p-6 max-w-xl mx-auto">
+                        <h2 className="text-2xl font-semibold mb-4 text-red-700"></h2>
+                        <form onSubmit={handleSubmit} className="space-y-4 max-w-xl">
+                            <input
+                            type="text"
+                            name="name"
+                            placeholder="Full Name"
+                            value={officer.name}
+                            onChange={handleChange}
+                            required
+                            className="w-full px-4 py-2 border border-gray-300 rounded-md"
+                            />
+                            <input
+                            type="email"
+                            name="email"
+                            placeholder="Email Address"
+                            value={officer.email}
+                            onChange={handleChange}
+                            required
+                            className="w-full px-4 py-2 border border-gray-300 rounded-md"
+                            />
+                            <input
+                            type="text"
+                            name="location"
+                            placeholder="Location"
+                            value={officer.location}
+                            onChange={handleChange}
+                            required
+                            className="w-full px-4 py-2 border border-gray-300 rounded-md"
+                            />
+                            <input
+                            type="text"
+                            name="officerId"
+                            placeholder="Officer ID"
+                            value={officer.officerId}
+                            onChange={handleChange}
+                            required
+                            className="w-full px-4 py-2 border border-gray-300 rounded-md"
+                            />
+
+                            <button
+                            type="submit"
+                            className="w-full bg-red-600 text-white py-2 rounded-md hover:bg-red-700 transition duration-200"
+                            >
+                            Add Officer
+                            </button>
+                        </form>
+                    </div>
+                </div>
             </div>
+            
         </main>
     </div>
   );

@@ -1,6 +1,7 @@
 import { Routes, Route } from 'react-router-dom';
 import OfficerDashboard from '../pages/officer/OfficerDashboard';
 import TemplateForm from '../pages/officer/TemplateForm';
+import MyReports from '../pages/officer/MyReports';
 import ProtectedRoute from './ProtectedRoute';
 
 const OfficerRoutes = ({ isAuthenticated }: { isAuthenticated: boolean }) => (
@@ -18,6 +19,14 @@ const OfficerRoutes = ({ isAuthenticated }: { isAuthenticated: boolean }) => (
       element={
         <ProtectedRoute isAuthenticated={isAuthenticated}>
           <TemplateForm />
+        </ProtectedRoute>
+      }
+    />
+    <Route
+      path="/officer/my-reports"
+      element={
+        <ProtectedRoute isAuthenticated={isAuthenticated}>
+          <MyReports />
         </ProtectedRoute>
       }
     />

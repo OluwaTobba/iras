@@ -34,12 +34,9 @@ interface OfficerProps {
 
             <div className="border-t border-gray-200" />
 
-            <div className="grid grid-cols-2 divide-x divide-gray-200 text-sm text-center">
-                <button className="py-2 hover:bg-gray-50 text-indigo-600 font-medium">
-                    View Profile
-                </button>
-                <button className="py-2 hover:bg-gray-50 text-blue-600 font-medium">
-                    Continuous Feedback
+            <div className="divide-x divide-gray-200 text-sm text-center">
+                <button className="py-2 hover:bg-gray-70 text-indigo-600 font-medium cursor-pointer">
+                    View Submissions
                 </button>
             </div>
         </div>

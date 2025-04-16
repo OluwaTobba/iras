@@ -12,7 +12,7 @@ function App() {
   }
 
   const isAuthenticated = !!user;
-  const isAdmin = user?.email === 'admin@sterlingbankhq.com';
+  const isAdmin = user?.email === 'admin@bankhq.com';
 
   return (
     <Router>

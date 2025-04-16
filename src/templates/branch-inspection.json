@@ -1,0 +1,56 @@
+{
+    "templateId": "branch-inspection",
+    "title": "Branch Inspection Report",
+    "description": "Monthly inspection report for bank branches.",
+    "fields": [
+      {
+        "label": "Branch Name",
+        "type": "text",
+        "name": "branchName",
+        "required": true
+      },
+      {
+        "label": "Location",
+        "type": "text",
+        "name": "location",
+        "required": true
+      },
+      {
+        "label": "Date of Inspection",
+        "type": "date",
+        "name": "inspectionDate",
+        "required": true
+      },
+      {
+        "label": "General Cleanliness",
+        "type": "select",
+        "name": "cleanliness",
+        "required": true,
+        "options": ["Excellent", "Good", "Fair", "Poor"]
+      },
+      {
+        "label": "Security Equipment Functional?",
+        "type": "select",
+        "name": "securityFunctional",
+        "required": true,
+        "options": ["Yes", "No"]
+      },
+      {
+        "label": "Cash Movement Record Verified",
+        "type": "select",
+        "name": "cashRecordVerified",
+        "required": true,
+        "options": ["Yes", "No"]
+      },
+      {
+        "label": "Issues Noted",
+        "type": "textarea",
+        "name": "issuesNoted"
+      },
+      {
+        "label": "Recommendations",
+        "type": "textarea",
+        "name": "recommendations"
+      }
+    ]
+}

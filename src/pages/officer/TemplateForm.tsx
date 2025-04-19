@@ -10,8 +10,8 @@ function TemplateForm() {
       <Sidebar />
 
       <main className='flex-1 bg-gray-50 min-h-screen'>
-          <header className="flex justify-between items-center p-4 shadow-md bg-white">
-            <h1 className="text-xl font-bold text-red-700">Officer Dashboard</h1>
+          <header className="flex justify-between items-center p-6 shadow-md bg-white">
+            <h1 className="text-xl font-bold text-red-700 ml-9">Template Form</h1>
             <Logout />
           </header>
 

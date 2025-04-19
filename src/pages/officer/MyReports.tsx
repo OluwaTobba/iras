@@ -40,8 +40,8 @@ function MyReports() {
         <div className="flex">
             <Sidebar />
             <main className="flex-1 bg-gray-50 min-h-screen">
-                <header className="flex justify-between items-center p-6 shadow bg-white">
-                    <h1 className="text-2xl font-bold text-red-800">All Submitted Reports</h1>
+                <header className="flex justify-between items-center p-6 shadow-md bg-white">
+                    <h1 className="text-xl font-bold text-red-800 ml-9">All Submitted Reports</h1>
                     <Logout />
                 </header>
 

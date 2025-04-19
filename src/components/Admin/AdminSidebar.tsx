@@ -1,4 +1,3 @@
-// AdminSidebar.tsx
 import { NavLink } from 'react-router-dom';
 import { FaHome, FaUser, FaUserPlus, FaChartLine, FaUserShield } from 'react-icons/fa';
 
@@ -18,7 +17,6 @@ function AdminSidebar() {
         <h2 className="text-lg font-bold text-orange-500 mt-4">ADMIN</h2>
       </div>
 
-      {/* Navigation */}
       <nav className="w-full px-4 flex flex-col gap-4">
         <ul className="space-y-3">
           <li>

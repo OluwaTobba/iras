@@ -39,7 +39,7 @@ function OfficerDashboard() {
       <Sidebar />
       <main className="flex-1 bg-gray-50 min-h-screen">
         <header className="flex justify-between items-center p-6 shadow-md bg-white">
-          <h1 className="text-2xl font-bold text-red-700">Officer Dashboard</h1>
+          <h1 className="text-xl font-bold text-red-700 ml-9">Officer Dashboard</h1>
           <Logout />
         </header>
 

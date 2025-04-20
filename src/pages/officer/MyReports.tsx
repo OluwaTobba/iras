@@ -45,32 +45,32 @@ function MyReports() {
                     <Logout />
                 </header>
 
-                <div className="p-6">
-                    <h2 className="text-2xl font-semibold text-red-700 mb-4"></h2>
+                <div className="px-6 py-6">
+                    <h2 className="text-2xl md:text-2xl font-semibold text-red-700 mb-4"></h2>
 
                     <div className="overflow-x-auto bg-white rounded-xl shadow-md p-4">
 
-                        <table className="min-w-full text-left">
+                        <table className="min-w-full text-left text-sm">
                             <thead>
-                                <tr className="text-sm text-gray-600 border-b">
-                                <th className="py-2">Officer</th>
-                                <th className="py-2">Officer ID</th>
-                                <th className="py-2">Location</th>
-                                <th className="py-2">Date Submitted</th>
-                                <th className="py-2">Summary</th>
-                                <th className="py-2">Action</th>
+                                <tr className="md:text-sm text-gray-600 border-b text-xs">
+                                <th className="py-2 px-2">Officer</th>
+                                <th className="py-2 px-2">Officer ID</th>
+                                <th className="py-2 px-2">Location</th>
+                                <th className="py-2 px-2">Date Submitted</th>
+                                <th className="py-2 px-2">Summary</th>
+                                <th className="py-2 px-2">Action</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 {reports.map((report) => (
-                                <tr key={report.id} className="border-b hover:bg-gray-50">
-                                    <td className="py-2">{report.officerName}</td>
-                                    <td className="py-2">{report.officerId}</td>
-                                    <td className="py-2">{report.location}</td>
-                                    <td className="py-2">{report.submittedAt}</td>
-                                    <td className="py-2">{report.summary}</td>
-                                    <td className="py-2">
-                                    <button className="text-blue-600 hover:underline">View</button>
+                                <tr key={report.id} className="border-b hover:bg-gray-50 text-xs md:text-sm">
+                                    <td className="py-2 px-2">{report.officerName}</td>
+                                    <td className="py-2 px-2">{report.officerId}</td>
+                                    <td className="py-2 px-2">{report.location}</td>
+                                    <td className="py-2 px-2">{report.submittedAt}</td>
+                                    <td className="py-2 px-2">{report.summary}</td>
+                                    <td className="py-2 px-2">
+                                        <button className="text-blue-600 hover:underline">View</button>
                                     </td>
                                 </tr>
                                 ))}

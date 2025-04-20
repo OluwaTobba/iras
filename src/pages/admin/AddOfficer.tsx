@@ -27,15 +27,15 @@ function AddOfficer() {
         <Sidebar />
         <main className="flex-1 bg-gray-50 min-h-screen">
             <header className="flex justify-between items-center p-6 shadow bg-white">
-                <h1 className="text-2xl font-bold text-red-800">Add New Officer</h1>
+                <h1 className="text-xl font-bold text-red-800 ml-9">Add New Officer</h1>
                 <Logout />
             </header>
 
-            <div className="mt-20 flex items-center justify-center">
-                <div className="bg-gray-100 p-10 rounded-2xl shadow-xl w-full max-w-3xl border-t-8 border-red-500">
-                    <div className="p-6 max-w-xl mx-auto">
-                        <h2 className="text-2xl font-semibold mb-4 text-red-700"></h2>
-                        <form onSubmit={handleSubmit} className="space-y-4 max-w-xl">
+            <div className="mt-20 px-4 sm:px-6 flex items-center justify-center">
+                <div className="bg-gray-100 p-6 sm:p-10 rounded-2xl shadow-xl w-full max-w-3xl border-t-8 border-red-500">
+                    <div className="p-4 sm:p-6 max-w-xl mx-auto w-full">
+                        <h2 className="text-2xl font-semibold mb-4 text-red-700 text-center sm:text-left"></h2>
+                        <form onSubmit={handleSubmit} className="space-y-4">
                             <input
                             type="text"
                             name="name"
@@ -74,10 +74,10 @@ function AddOfficer() {
                             />
 
                             <button
-                            type="submit"
-                            className="w-full bg-red-600 text-white py-2 rounded-md hover:bg-red-700 transition duration-200"
+                                type="submit"
+                                className="w-full bg-red-600 text-white py-2 rounded-md hover:bg-red-700 transition duration-200"
                             >
-                            Add Officer
+                                Add Officer
                             </button>
                         </form>
                     </div>

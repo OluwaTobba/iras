@@ -47,13 +47,13 @@ function AdminControl() {
 
         <main className="flex-1 bg-gray-50 min-h-screen">
           <header className="flex justify-between items-center p-6 shadow bg-white">
-            <h1 className="text-2xl font-bold text-red-800">Officers Overview</h1>
+            <h1 className="text-xl font-bold text-red-800 ml-9">Officers Overview</h1>
             <Logout />
           </header>
 
-          <section className="p-6">
-            <h2 className="text-xl font-semibold mb-4 text-gray-800"></h2>
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+          <section className="px-4 py-6">
+            <h2 className="text-xl font-semibold mb-4 text-gray-800 text-center md:text-left"></h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 justify-items-center">
               {dummyOfficers.map((officer, index) => (
                 <OfficerCard key={index} {...officer} />
               ))}

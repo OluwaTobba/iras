@@ -18,7 +18,7 @@ function OfficerSidebar() {
     <>
       <button
         onClick={toggleSidebar}
-        className="lg:hidden fixed top-6 left-4 z-40 text-white bg-red-700 p-2 rounded-md cursor-pointer"
+        className="lg:hidden fixed top-6 left-4 z-40 text-white bg-orange-700 p-2 rounded-md cursor-pointer"
       >
         <FaBars size={20} />
       </button>
@@ -31,7 +31,7 @@ function OfficerSidebar() {
       )}
 
       <aside
-        className={`fixed lg:static top-0 left-0 z-40 w-64 min-h-screen bg-blue-900 shadow-md flex flex-col items-center py-8 transform transition-transform duration-300 ${
+        className={`fixed lg:static top-0 left-0 z-40 w-64 min-h-screen bg-orange-500 shadow-md flex flex-col items-center py-8 transform transition-transform duration-300 ${
           isOpen ? 'translate-x-0' : '-translate-x-full'
         } lg:translate-x-0`}
       >

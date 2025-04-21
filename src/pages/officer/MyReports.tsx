@@ -37,7 +37,7 @@ function MyReports() {
     }, []);
 
     return (
-        <div className="flex">
+        <div className="flex flex-col md:flex-row">
             <Sidebar />
             <main className="flex-1 bg-gray-50 min-h-screen">
                 <header className="flex justify-between items-center p-6 shadow-md bg-white">
